@@ -5,17 +5,17 @@
 
 #include "messages/messages.h"
 
-const char* getErrorMessage(const RelationErrorCode code) {
+const char* getRelationErrorMessage(const RelationErrorCode code) {
 	const char* errorMessage;
 
 	if (errorMessages[0] == NULL) initErrorMessages();
 
 	const MessageLanguage language = getCurrentLanguage();
 
-	if (code < ERRORS_COUNT) {
+	if (code < RELATION_ERRORS_COUNT) {
 		errorMessage = errorMessages[language][code].message;
 	} else {
-		errorMessage = errorMessages[language][UNKNOWN_ERROR].message;
+		errorMessage = errorMessages[language][RELATION_UNKNOWN_ERROR].message;
 	}
 
 	return errorMessage;

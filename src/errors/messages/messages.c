@@ -4,8 +4,8 @@
 
 #include <relations/config.h>
 
-extern const RelationErrorMessage RU_MESSAGES[ERRORS_COUNT];
-extern const RelationErrorMessage EN_MESSAGES[ERRORS_COUNT];
+extern const RelationErrorMessage RU_MESSAGES[RELATION_ERRORS_COUNT];
+extern const RelationErrorMessage EN_MESSAGES[RELATION_ERRORS_COUNT];
 
 const RelationErrorMessage* errorMessages[LANGUAGES_COUNT] = {NULL};
 
