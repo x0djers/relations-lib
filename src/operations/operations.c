@@ -24,3 +24,19 @@ void freeRelationOutcome(RelationOutcome* outcome) {
         outcome->errorCode = RELATION_NONE_ERROR;
     }
 }
+
+bool isRelationContain(const uint8_t x,
+                       const uint8_t y,
+                       const RelationOutcome outcome) {
+    bool isContained = false;
+    if (x < outcome.relation.matrix.matrix->rows &&
+        y < outcome.relation.matrix.matrix->cols) {
+        isContained = outcome.relation.matrix.matrix->data[x][y] == 1;
+    }
+
+    return isContained;
+}
+
+
+
+

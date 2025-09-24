@@ -16,6 +16,7 @@ typedef struct {
 
 RelationOutcome loadRelationFromFile(const char* file);
 void freeRelationOutcome(RelationOutcome* outcome);
+bool isRelationContain(uint8_t x, uint8_t y, RelationOutcome outcome);
 
 #endif
 
